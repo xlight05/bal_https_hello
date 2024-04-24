@@ -1,0 +1,22 @@
+services:
+  api:
+    image: xlight05/https_hello:0.3.0 
+    ports:
+      - "9090:9090"
+    deploy:
+        resources:
+            limits:
+              cpus: 2
+              memory: 1024M
+    links:
+    - netty
+    depends_on:
+    - netty
+  netty:
+    image: ldclakmal/netty-echo-backend:latest
+    ports:
+      - "8688:8688"
+    environment:
+      - SSL=true
+      - HTTP2=true
+    

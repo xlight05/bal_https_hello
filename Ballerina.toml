@@ -1,0 +1,9 @@
+[package]
+org = "wso2"
+name = "https_hello"
+version = "0.1.0"
+distribution = "2201.8.5-20240215-121600-220e9a17"
+
+[build-options]
+observabilityIncluded = true
+cloud = "docker"

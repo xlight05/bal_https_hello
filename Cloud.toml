@@ -1,0 +1,12 @@
+[container.image]
+repository="xlight05"
+name="https_hello"
+tag="0.3.0"
+
+[[container.copy.files]]
+sourceFile="./security/ballerinaKeystore.p12"
+target="/home/ballerina/security/ballerinaKeystore.p12"
+
+[[container.copy.files]]
+sourceFile="./security/ballerinaTruststore.p12"
+target="/home/ballerina/security/ballerinaTruststore.p12"
